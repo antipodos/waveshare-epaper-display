@@ -22,8 +22,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.5125"
-     inkscape:cx="391.73554"
-     inkscape:cy="241.98347"
+     inkscape:cx="392.39669"
+     inkscape:cy="242.64463"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -34,7 +34,8 @@
      height="480"
      id="rect3855"
      fill="white" /><g
-     id="currentweather" transform="scale(0.5) translate(70,15)"><use
+     id="currentweather"
+     transform="scale(0.5) translate(70,15)"><use
        id="currentweathericon"
        href="icons/ICON_ONE.svg" /></g><path
      d="m 398,354.13426 v 105.37401 h 3 V 105 h -3 z"
@@ -279,16 +280,24 @@
 </g></g><text
      id="temphighlow"
      x="177.10236"
-     y="28.5513"
+     y="30.5513"
      font-size="38px"
      style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">HIGH_ONE/LOW_ONE</text><text
      id="weatherdesc1"
      x="177.10236"
      y="52.5513"
      font-size="38px"
-     style="font-size:24px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_1</text><text
+     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_1</text><text
      id="weaetherdesc2"
      x="177.10236"
-     y="79.5513"
+     y="73.5513"
      font-size="38px"
-     style="font-size:24px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_2</text></svg>
+     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_2</text><text
+     id="textday"
+     x="775.68213"
+     y="30.212566"
+     style="font-weight:600;font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-align:end;text-anchor:end">DAY_NAME</text><text
+     id="textdate"
+     x="776.70538"
+     y="67.867821"
+     style="font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-align:end;text-anchor:end">DAY_ONE</text></svg>

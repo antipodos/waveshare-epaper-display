@@ -34,10 +34,10 @@
      height="480"
      id="rect3855"
      fill="white" /><g
-     transform="scale(1.2) translate(75 165)"
+     transform="scale(1.2) translate(100 500)"
      id="currentweather"><use
        id="currentweathericon"
-       href="icons/foggy.svg" /></g><text
+       href="icons/ICON_ONE.svg" /></g><text
      id="temphighlow"
      x="741.44629"
      y="62.47934"
@@ -136,7 +136,7 @@
          style="font-weight:bold"
          x="19.081011"
          id="tspan57-7"
-         dy="25"><![CDATA[CUSTAM_DATA_4]]></tspan></text><text
+         dy="25"><![CDATA[CUSTOM_DATA_4]]></tspan></text><text
        id="calendarentry2-3"
        x="19.915483"
        y="336.00931"
@@ -172,7 +172,7 @@
          style="font-weight:bold"
          x="19.081011"
          id="tspan57-7-7"
-         dy="25"><![CDATA[CUSTAM_DATA_1]]></tspan></text><text
+         dy="25"><![CDATA[CUSTOM_DATA_1]]></tspan></text><text
        id="calendarentry2-3-0"
        x="19.421343"
        y="186.29008"
@@ -208,9 +208,7 @@
          style="font-weight:bold"
          x="19.915483"
          dy="25"
-         id="tspan72-6"><![CDATA[CUSTOM_DATA_7]]></tspan></text></g><use
-     id="customdata"
-     href="screen-output-custom-temp.svg" /><g
+         id="tspan72-6"><![CDATA[CUSTOM_DATA_7]]></tspan></text></g><g
      id="g765"
      transform="matrix(0.10208823,0,0,0.10208823,19.999955,54.88732)"><g
        id="XMLID_95_">

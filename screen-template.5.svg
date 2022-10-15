@@ -34,7 +34,7 @@
      height="480"
      id="rect3855"
      fill="white" /><g
-     id="currentweather" transform="scale(0.5) translate(30, 300)"><use
+     id="currentweather" transform="scale(0.5) translate(70,15)"><use
        id="currentweathericon"
        href="icons/ICON_ONE.svg" /></g><path
      d="m 398,354.13426 v 105.37401 h 3 V 105 h -3 z"
@@ -119,11 +119,11 @@
        x="434.85449"
        dy="25"
        style="font-size:23px"
-       id="tspan70-64">CAL_DATETIME_4</tspan><tspan
+       id="tspan70-64">CAL_DATETIME_5</tspan><tspan
        style="font-weight:bold"
        x="434.85449"
        dy="25"
-       id="tspan72-7"><![CDATA[CAL_DESC_4]]></tspan></text><text
+       id="tspan72-7"><![CDATA[CAL_DESC_5]]></tspan></text><text
      id="calendarentry4-4"
      x="434.85449"
      y="346.74463"
@@ -132,11 +132,11 @@
        x="434.85449"
        dy="25"
        style="font-size:23px"
-       id="tspan70-9">CAL_DATETIME_4</tspan><tspan
+       id="tspan70-9">CAL_DATETIME_6</tspan><tspan
        style="font-weight:bold"
        x="434.85449"
        dy="25"
-       id="tspan72-3"><![CDATA[CAL_DESC_4]]></tspan></text><text
+       id="tspan72-3"><![CDATA[CAL_DESC_6]]></tspan></text><text
      id="calendarentry4-97"
      x="434.85449"
      y="396.74463"
@@ -145,11 +145,11 @@
        x="434.85449"
        dy="25"
        style="font-size:23px"
-       id="tspan70-5">CAL_DATETIME_4</tspan><tspan
+       id="tspan70-5">CAL_DATETIME_7</tspan><tspan
        style="font-weight:bold"
        x="434.85449"
        dy="25"
-       id="tspan72-4"><![CDATA[CAL_DESC_4]]></tspan></text><text
+       id="tspan72-4"><![CDATA[CAL_DESC_7]]></tspan></text><text
      id="calendarentry1-5"
      x="33.626465"
      y="271.46384"
@@ -278,17 +278,17 @@
        id="g739">
 </g></g><text
      id="temphighlow"
-     x="527.10236"
+     x="177.10236"
      y="28.5513"
      font-size="38px"
      style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">HIGH_ONE/LOW_ONE</text><text
      id="weatherdesc1"
-     x="527.10236"
+     x="177.10236"
      y="52.5513"
      font-size="38px"
      style="font-size:24px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_1</text><text
      id="weaetherdesc2"
-     x="527.10236"
+     x="177.10236"
      y="79.5513"
      font-size="38px"
      style="font-size:24px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_2</text></svg>

@@ -114,6 +114,7 @@ def get_google_events(max_event_results):
             timeMin=today_start_time.isoformat() + 'Z',
             maxResults=max_event_results,
             singleEvents=True,
+	    timeZone = os.getenv("GOOGLE_CALENDAR_TIMEZONE", "UTC"),
             orderBy='startTime').execute()
 
         with open(google_calendar_pickle, 'wb') as cal:

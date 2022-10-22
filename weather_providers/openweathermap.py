@@ -1,4 +1,7 @@
 import logging
+import datetime
+import pytz
+import os
 from weather_providers.base_provider import BaseWeatherProvider
 
 
@@ -82,18 +85,34 @@ class OpenWeatherMap(BaseWeatherProvider):
     # https://openweathermap.org/api/one-call-api
     def get_weather(self):
 
-        url = ("https://api.openweathermap.org/data/2.5/onecall?lat={}&lon={}&exclude=current,minutely,hourly&units={}&appid={}"
+        url = ("https://api.openweathermap.org/data/2.5/forecast?lat={}&lon={}&exclude=current,minutely,hourly&units={}&appid={}"
                .format(self.location_lat, self.location_long, self.units, self.openweathermap_apikey))
         response_data = self.get_response_json(url)
         logging.debug(response_data)
-        weather_data = response_data["daily"][0]
-        logging.debug("get_weather() - {}".format(weather_data))
 
-        # { "temperatureMin": "2.0", "temperatureMax": "15.1", "icon": "mostly_cloudy", "description": "Cloudy with light breezes" }
+        weather_data_1 = response_data["list"][0]
+        weather_data_2 = response_data["list"][1]
+        weather_data_3 = response_data["list"][2]
+
+        dt_1 = datetime.datetime.fromtimestamp(weather_data_1["dt"], pytz.timezone(os.getenv("GOOGLE_CALENDAR_TIMEZONE", "UTC")))
+        dt_2 = datetime.datetime.fromtimestamp(weather_data_2["dt"], pytz.timezone(os.getenv("GOOGLE_CALENDAR_TIMEZONE", "UTC")))
+        dt_3 = datetime.datetime.fromtimestamp(weather_data_3["dt"], pytz.timezone(os.getenv("GOOGLE_CALENDAR_TIMEZONE", "UTC")))
+
+        logging.debug("get_weather() - {},{},{}".format(weather_data_1, weather_data_2, weather_data_3))
+
         weather = {}
-        weather["temperatureMin"] = weather_data["temp"]["min"]
-        weather["temperatureMax"] = weather_data["temp"]["max"]
-        weather["icon"] = self.get_icon_from_openweathermap_weathercode(weather_data["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
-        weather["description"] = weather_data["weather"][0]["description"].title()
+
+        weather["temp_1"] = weather_data_1["main"]["temp"]
+        weather["f_time_1"] = dt_1.strftime("%I %p")
+        weather["icon_1"] = self.get_icon_from_openweathermap_weathercode(weather_data_1["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long, dt_1))
+
+        weather["temp_2"] = weather_data_2["main"]["temp"]
+        weather["f_time_2"] = dt_2.strftime("%I %p")
+        weather["icon_2"] = self.get_icon_from_openweathermap_weathercode(weather_data_2["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long, dt_2))
+
+        weather["temp_3"] = weather_data_3["main"]["temp"]
+        weather["f_time_3"] = dt_3.strftime("%I %p")
+        weather["icon_3"] = self.get_icon_from_openweathermap_weathercode(weather_data_3["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long, dt_3))
+
         logging.debug(weather)
         return weather

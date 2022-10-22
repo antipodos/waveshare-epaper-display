@@ -33,13 +33,14 @@ class BaseWeatherProvider(ABC):
         """
         return (float(celsius)*9/5) + 32
 
-    def is_daytime(self, location_lat, location_long):
+    def is_daytime(self, location_lat, location_long, dt=None):
         """
         Return whether it's daytime for a given lat/long.
         """
 
         # adjust icon for sunrise and sunset
-        dt = datetime.datetime.now(pytz.utc)
+        if dt is None:
+                dt = datetime.datetime.now(pytz.utc)
         city = LocationInfo(location_lat, location_long)
         s = sun(city.observer, date=dt)
         verdict = False

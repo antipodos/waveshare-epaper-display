@@ -145,23 +145,18 @@ def main():
         logging.error("Unable to fetch weather payload. SVG will not be updated.")
         return
 
-    weather_desc = format_weather_description(weather["description"])
-
-    alert_message = get_alert_message(location_lat, location_long)
-    alert_message = format_alert_description(alert_message)
-    
     output_dict = {
-        'LOW_ONE': "{}{}".format(str(round(weather['temperatureMin'])), degrees),
-        'HIGH_ONE': "{}{}".format(str(round(weather['temperatureMax'])), degrees),
-        'ICON_ONE': weather["icon"],
-        'WEATHER_DESC_1': weather_desc[1],
-        'WEATHER_DESC_2': weather_desc[2],
-        'TIME_NOW': datetime.datetime.now().strftime("%-I:%M %p"),
-        'HOUR_NOW': datetime.datetime.now().strftime("%-I %p"),
+        'TEMP_1': "{}{}".format(str(round(weather['temp_1'])), degrees),
+        'TEMP_2': "{}{}".format(str(round(weather['temp_2'])), degrees),
+        'TEMP_3': "{}{}".format(str(round(weather['temp_3'])), degrees),
+        'ICON_1': weather["icon_1"],
+        'ICON_2': weather["icon_2"],
+        'ICON_3': weather["icon_3"],
+        'F_TIME_1': weather["f_time_1"],
+        'F_TIME_2': weather["f_time_2"],
+        'F_TIME_3': weather["f_time_3"],
         'DAY_ONE': datetime.datetime.now().strftime("%b %-d, %Y"),
-        'DAY_NAME': datetime.datetime.now().strftime("%A"),
-        'ALERT_MESSAGE_VISIBILITY': "visible" if alert_message else "hidden",
-        'ALERT_MESSAGE': alert_message
+        'DAY_NAME': datetime.datetime.now().strftime("%A")
     }
 
     logging.debug("main() - {}".format(output_dict))

@@ -23,7 +23,7 @@
      showgrid="false"
      inkscape:zoom="1.5125"
      inkscape:cx="392.39669"
-     inkscape:cy="242.64463"
+     inkscape:cy="243.30579"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -34,10 +34,22 @@
      height="480"
      id="rect3855"
      fill="white" /><g
-     id="currentweather"
-     transform="scale(0.5) translate(70,15)"><use
-       id="currentweathericon"
-       href="icons/ICON_ONE.svg" /></g><path
+     id="currentweather_1"
+     transform="scale(0.5) translate(70,25)"><use
+       id="currentweathericon_1"
+       href="icons/ICON_ONE.svg" /></g>
+	   <g
+     id="currentweather_2"
+     transform="scale(0.5) translate(390,25)"><use
+       id="currentweathericon_2"
+       href="icons/ICON_ONE.svg" /></g>
+	   <g
+     id="currentweather_3"
+     transform="scale(0.5) translate(710,25)"><use
+       id="currentweathericon_3"
+       href="icons/ICON_ONE.svg" /></g>
+	   
+	   <path
      d="m 398,354.13426 v 105.37401 h 3 V 105 h -3 z"
      id="divider"
      inkscape:connector-curvature="0"
@@ -279,20 +291,35 @@
        id="g739">
 </g></g><text
      id="temphighlow"
-     x="177.10236"
-     y="30.5513"
+     x="120.22633"
+     y="39.414085"
      font-size="38px"
-     style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">HIGH_ONE/LOW_ONE</text><text
+     style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">TEMP_1</text><text
      id="weatherdesc1"
-     x="177.10236"
-     y="52.5513"
+     x="120.22633"
+     y="61.414085"
      font-size="38px"
-     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_1</text><text
-     id="weaetherdesc2"
-     x="177.10236"
-     y="73.5513"
+     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">F_TIME_1</text><text
+     id="temphighlow-8"
+     x="280.22632"
+     y="39.414085"
      font-size="38px"
-     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">WEATHER_DESC_2</text><text
+     style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">TEMP_2</text><text
+     id="weatherdesc1-7"
+     x="280.22632"
+     y="61.414085"
+     font-size="38px"
+     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">F_TIME_2</text><text
+     id="temphighlow-8-0"
+     x="440.22632"
+     y="39.414085"
+     font-size="38px"
+     style="font-size:26.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">TEMP_3</text><text
+     id="weatherdesc1-7-9"
+     x="440.22632"
+     y="61.414085"
+     font-size="38px"
+     style="font-size:18.6667px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">F_TIME_3</text><text
      id="textday"
      x="775.68213"
      y="30.212566"

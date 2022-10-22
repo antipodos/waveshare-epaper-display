@@ -37,17 +37,17 @@
      id="currentweather_1"
      transform="scale(0.5) translate(70,25)"><use
        id="currentweathericon_1"
-       href="icons/ICON_ONE.svg" /></g>
+       href="icons/ICON_1.svg" /></g>
 	   <g
      id="currentweather_2"
      transform="scale(0.5) translate(390,25)"><use
        id="currentweathericon_2"
-       href="icons/ICON_ONE.svg" /></g>
+       href="icons/ICON_2.svg" /></g>
 	   <g
      id="currentweather_3"
      transform="scale(0.5) translate(710,25)"><use
        id="currentweathericon_3"
-       href="icons/ICON_ONE.svg" /></g>
+       href="icons/ICON_3.svg" /></g>
 	   
 	   <path
      d="m 398,354.13426 v 105.37401 h 3 V 105 h -3 z"

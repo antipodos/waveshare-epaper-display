@@ -57,6 +57,9 @@ def update_svg(template_svg_filename, output_svg_filename, output_dict):
     codecs.open(output_svg_filename, 'w', encoding='utf-8').write(output)
 
 
+def clean_text(text):
+    return (text[:20] + '...') if len(text) > 23 else text
+
 def is_stale(filepath, ttl):
     """
     Checks if the specified `filepath` is older than the `ttl` in seconds

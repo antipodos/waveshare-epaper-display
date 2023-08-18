@@ -1,5 +1,5 @@
 import logging
-from utility import update_svg, configure_logging
+from utility import update_svg, configure_logging, clean_text
 from requests import get
 import json
 
@@ -13,13 +13,13 @@ def main():
     result = response.json()
 
     output_dict = {
-        'CUSTOM_DATA_1' : result['friday'],
-	'CUSTOM_DATA_2' : result['saturday'],
-	'CUSTOM_DATA_3' : result['sunday'],
-	'CUSTOM_DATA_4' : result['monday'],
-	'CUSTOM_DATA_5' : result['tuesday'],
-	'CUSTOM_DATA_6' : result['wednesday'],
-	'CUSTOM_DATA_7' : result['thursday']
+        'CUSTOM_DATA_1' : clean_text(result['friday']),
+	'CUSTOM_DATA_2' : clean_text(result['saturday']),
+	'CUSTOM_DATA_3' : clean_text(result['sunday']),
+	'CUSTOM_DATA_4' : clean_text(result['monday']),
+	'CUSTOM_DATA_5' : clean_text(result['tuesday']),
+	'CUSTOM_DATA_6' : clean_text(result['wednesday']),
+	'CUSTOM_DATA_7' : clean_text(result['thursday'])
     }
 
     logging.info("custom: " + str(output_dict))

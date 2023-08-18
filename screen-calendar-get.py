@@ -8,7 +8,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 import outlook_util
-from utility import is_stale, update_svg, configure_logging, get_formatted_date
+from utility import is_stale, update_svg, configure_logging, get_formatted_date, clean_text
 
 configure_logging()
 
@@ -58,7 +58,7 @@ def get_output_dict_from_outlook_events(outlook_events, event_slot_count):
         event_label_id = str(event_i + 1)
         if (event_i <= event_count - 1):
             formatted_events['CAL_DATETIME_' + event_label_id] = outlook_util.get_outlook_datetime_formatted(events[event_i])
-            formatted_events['CAL_DESC_' + event_label_id] = events[event_i]['subject']
+            formatted_events['CAL_DESC_' + event_label_id] = clean_text(events[event_i]['subject'])
         else:
             formatted_events['CAL_DATETIME_' + event_label_id] = ""
             formatted_events['CAL_DESC_' + event_label_id] = ""
@@ -140,7 +140,7 @@ def get_output_dict_from_google_events(events, event_slot_count):
         event_label_id = str(event_i + 1)
         if (event_i <= event_count - 1):
             formatted_events['CAL_DATETIME_' + event_label_id] = get_google_datetime_formatted(events[event_i]['start'], events[event_i]['end'])
-            formatted_events['CAL_DESC_' + event_label_id] = events[event_i]['summary']
+            formatted_events['CAL_DESC_' + event_label_id] = clean_text(events[event_i]['summary'])
         else:
             formatted_events['CAL_DATETIME_' + event_label_id] = ""
             formatted_events['CAL_DESC_' + event_label_id] = ""
